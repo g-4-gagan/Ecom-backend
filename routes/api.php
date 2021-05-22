@@ -23,3 +23,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/register',[UserController::class,'register']);
 Route::post('/login',[UserController::class,'login']);
 Route::post('/addProduct',[ProductController::class,'addProduct']);
+Route::get('/productList',[ProductController::class,'productList']);

@@ -17,7 +17,13 @@ class ProductController extends Controller
     	$product->price = $request->price;
     	$product->file_path=$request->file('file')->store('products');
     	$product->save();
-    	return $product;
+        $result = array("status"=>"success");
+    	return json_encode($result);
 
+    }
+
+    function productList()
+    {
+        return Product::all();
     }
 }
