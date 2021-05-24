@@ -26,4 +26,24 @@ class ProductController extends Controller
     {
         return Product::all();
     }
+
+    function deleteProduct($id)
+    {
+        $result = Product::where('id',$id)->delete();
+        if ($result) 
+        {
+            return ['status'=>'success'];
+        }
+        else{
+            return ['status'=>'fail'];
+        }
+        
+    }
+
+    function getProduct($id)
+    {
+        return Product::find($id);
+    }
+
+
 }
