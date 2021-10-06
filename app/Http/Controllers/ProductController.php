@@ -13,6 +13,7 @@ class ProductController extends Controller
     function addProduct(Request $request)
     {
     	$product = new Product;
+        return($request->name);
     	$product->name = $request->name;
     	$product->description = $request->description;
     	$product->price = $request->price;
