@@ -14,17 +14,17 @@ class ProductController extends Controller
     {
     	$product = new Product;
         return($request->name);
-    	$product->name = $request->name;
-    	$product->description = $request->description;
-    	$product->price = $request->price;
-        $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath(),
-            array("folder" => "ecom-dashboard", "overwrite" => TRUE, "resource_type" => "image"))->getSecurePath();
-        // return($uploadedFileUrl);
-    	// $product->file_path=$request->file('file')->store('products');
-        $product->file_path=$uploadedFileUrl;
-    	$product->save();
-        $result = array("status"=>"success");
-    	return json_encode($result);
+    	// $product->name = $request->name;
+    	// $product->description = $request->description;
+    	// $product->price = $request->price;
+     //    $uploadedFileUrl = Cloudinary::upload($request->file('file')->getRealPath(),
+     //        array("folder" => "ecom-dashboard", "overwrite" => TRUE, "resource_type" => "image"))->getSecurePath();
+     //    // return($uploadedFileUrl);
+    	// // $product->file_path=$request->file('file')->store('products');
+     //    $product->file_path=$uploadedFileUrl;
+    	// $product->save();
+     //    $result = array("status"=>"success");
+    	// return json_encode($result);
 
     }
 
